@@ -30,21 +30,21 @@ double factorial(int);
 * This function computes factorials recursively.                   *
 *******************************************************************/
 void getInfo(int &n, int &k) {
-    cout << "How many balls (1-12) are in the pool to pick from?";
+    cout << "How many balls (1-12) are in the pool to pick from?" << endl;
     cin >> n;
     if (n>12) {
-        cout<<"Input Error!";
-        cout << "How many balls (1-12) are in the pool to pick from?";
+        cout<<"Input Error!"<< endl;
+        cout << "How many balls (1-12) are in the pool to pick from?" << endl;
         cin >> n;
     }
     else {
 
     }
-    cout << "How many balls (1-7) must be drawn?";
+    cout << "How many balls (1-7) must be drawn?" << endl;
     cin >> k;
     if (k>7) {
-        cout<<"Input Error!";
-        cout << "How many balls (1-7) must be drawn?";
+        cout<<"Input Error!" << endl;
+        cout << "How many balls (1-7) must be drawn?" << endl;
         cin >> k;
     }
     else {
