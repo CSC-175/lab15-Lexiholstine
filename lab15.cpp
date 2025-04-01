@@ -2,8 +2,8 @@
 using namespace std;
 
 // Function prototypes
-void getInfo(int&, int&);
-double computeWays(int, int);
+void getInfo(int&n, int&k);
+double computeWays(int n, int k);
 double factorial(int);
 
 /*******************************************************************
@@ -11,8 +11,6 @@ double factorial(int);
 * Gets and validates lottery info from the user and places it in   *
 * reference parameters referencing variables in the main function. *
 ********************************************************************/
-
-
 
 /*******************************************************************
 * computeWays                                                      *
@@ -31,5 +29,42 @@ double factorial(int);
 * factorial                                                        *
 * This function computes factorials recursively.                   *
 *******************************************************************/
+void getInfo(int &n, int &k) {
+    cout << "How many balls (1-12) are in the pool to pick from?";
+    cin >> n;
+    if (n>12) {
+        cout<<"Input Error!";
+        cout << "How many balls (1-12) are in the pool to pick from?";
+        cin >> n;
+    }
+    else {
+
+    }
+    cout << "How many balls (1-7) must be drawn?";
+    cin >> k;
+    if (k>7) {
+        cout<<"Input Error!";
+        cout << "How many balls (1-7) must be drawn?";
+        cin >> k;
+    }
+    else {
+
+    }
+}
+double factorial(int n) {
+    if (n==0) {
+        return 1;
+    }
+    else {
+        return n * factorial(n-1);
+    }
+}
+
+double computeWays(int n, int k) {
+    return (factorial(k)*factorial(n-k)/factorial(n));
+}
+
+
+
 
 
